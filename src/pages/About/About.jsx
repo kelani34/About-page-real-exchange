@@ -45,6 +45,16 @@ const About = () => {
             </MissionContent>
           </MissionSection>
         </MissionVisionSection>
+
+        <ValueSection>
+          <ValueContent>
+            <ValueHead>Our Values</ValueHead>
+            <ValueText>
+              Offering a unique experience and providing an accurate of any
+              country exchange rate of your choice{" "}
+            </ValueText>
+          </ValueContent>
+        </ValueSection>
       </StyledPage>
     </>
   );
@@ -219,3 +229,24 @@ const MissionText = styled.p`
   font-size: 20px;
   line-height: 28px;
 `;
+
+const ValueSection = styled.div`
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  color: #202020;
+  font-family: var(--font-family);
+  padding: 100px 177px;
+`;
+const ValueContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const ValueHead = styled.h2`
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 28px;
+`;
+const ValueText = styled.p``;

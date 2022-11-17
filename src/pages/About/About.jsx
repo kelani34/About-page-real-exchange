@@ -35,7 +35,7 @@ const About = () => {
             </MissionContent>
           </MissionSection>
           <MissionSection vision>
-            <MissionImage vision src={missionImage} alt="mission" />
+            <MissionImage vision src={visionImage} alt="mission" />
             <MissionContent>
               <MissionHead>Our Vision</MissionHead>
               <MissionText>

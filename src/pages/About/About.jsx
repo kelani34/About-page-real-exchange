@@ -154,7 +154,7 @@ const About = () => {
         </TeamSection>
 
         <DownloadSection>
-          <Img src={mobileImage} />
+          <MImg src={mobileImage} />
           <DownloadView>
             <DownloadContent>
               <DownloadHeader>Download Streetrates App</DownloadHeader>
@@ -163,7 +163,7 @@ const About = () => {
                 notifications and more.
               </DownloadText>
               <Scan>
-                <img src={scan} />
+                <ScanImg src={scan} />
               </Scan>
               <DownloadIcons>
                 <AppleDownload>
@@ -425,6 +425,12 @@ const TeamSection = styled.div`
     align-items: center;
     width: 730px;
   }
+  @media ${devices.laptopS} {
+    flex-direction: column;
+    padding: 42px 44px;
+    align-items: center;
+    width: auto;
+  }
   @media ${devices.tablet} {
     flex-direction: column;
     padding: 42px 44px;
@@ -463,6 +469,7 @@ const DownloadSection = styled.div`
     flex-direction: column;
     padding: 42px 224px;
     align-items: center;
+    /* width: 730px; */
   }
   @media ${devices.tablet} {
     flex-direction: column;
@@ -478,6 +485,12 @@ const DownloadSection = styled.div`
 const DownloadView = styled.div``;
 const DownloadContent = styled.div`
   margin: 0 158px;
+  @media ${devices.laptop} {
+    margin: 0;
+  }
+  @media ${devices.tablet} {
+    text-align: center;
+  }
 `;
 const DownloadHeader = styled.div`
   font-weight: 600;
@@ -494,6 +507,15 @@ const DownloadText = styled.div`
 const Scan = styled.div`
   margin-bottom: 24px;
 `;
+const ScanImg = styled.img`
+  width: 422px;
+  @media ${devices.tablet} {
+    width: auto;
+  }
+  @media ${devices.mobile} {
+    width: auto;
+  }
+`;
 
 const GoogleDownload = styled.a``;
 
@@ -501,4 +523,24 @@ const AppleDownload = styled.a``;
 const DownloadIcons = styled.div`
   display: flex;
   gap: 10px;
+  @media ${devices.tablet} {
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${devices.mobile} {
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+const MImg = styled.img`
+  @media ${devices.laptopS} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: none;
+  }
+  @media ${devices.mobile} {
+    display: none;
+  }
 `;

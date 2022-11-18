@@ -16,7 +16,7 @@ const About = () => {
   return (
     <>
       <StyledPage>
-        <AboutContainer>
+        <Container about>
           <AboutSection>
             <AboutContent>
               <AboutHead>About Us</AboutHead>
@@ -31,9 +31,9 @@ const About = () => {
               <Img src={mobileImage} alt="mobileimage" />
             </AboutImage>
           </AboutSection>
-        </AboutContainer>
+        </Container>
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <Container>
           <MissionVisionSection>
             <MissionSection>
               <MissionImage src={missionImage} alt="mission" />
@@ -56,8 +56,9 @@ const About = () => {
               </MissionContent>
             </MissionSection>
           </MissionVisionSection>
-        </div>
-        <ValuesContainer>
+        </Container>
+
+        <Container values>
           <ValueSection>
             <StyledContent>
               <StyledHead>Our Values</StyledHead>
@@ -89,8 +90,8 @@ const About = () => {
               />
             </ValuesList>
           </ValueSection>
-        </ValuesContainer>
-        <TeamContainer>
+        </Container>
+        <Container>
           <TeamSection>
             <StyledContent>
               <StyledHead>Meet the Brilliant Team</StyledHead>
@@ -142,31 +143,32 @@ const About = () => {
               />
             </TeamMembers>
           </TeamSection>
-        </TeamContainer>
-
-        <DownloadSection>
-          <MImg src={mobileImage} />
-          <DownloadView>
-            <DownloadContent>
-              <DownloadHeader>Download Streetrates App</DownloadHeader>
-              <DownloadText>
-                Check live rates, send money securely, set rate alerts, receive
-                notifications and more.
-              </DownloadText>
-              <Scan>
-                <ScanImg src={scan} />
-              </Scan>
-              <DownloadIcons>
-                <AppleDownload>
-                  <AppstoreIcon />
-                </AppleDownload>
-                <GoogleDownload>
-                  <GoogleplayIcon />
-                </GoogleDownload>
-              </DownloadIcons>
-            </DownloadContent>
-          </DownloadView>
-        </DownloadSection>
+        </Container>
+        <Container>
+          <DownloadSection>
+            <MImg src={mobileImage} />
+            <DownloadView>
+              <DownloadContent>
+                <DownloadHeader>Download Streetrates App</DownloadHeader>
+                <DownloadText>
+                  Check live rates, send money securely, set rate alerts,
+                  receive notifications and more.
+                </DownloadText>
+                <Scan>
+                  <ScanImg src={scan} />
+                </Scan>
+                <DownloadIcons>
+                  <AppleDownload>
+                    <AppstoreIcon />
+                  </AppleDownload>
+                  <GoogleDownload>
+                    <GoogleplayIcon />
+                  </GoogleDownload>
+                </DownloadIcons>
+              </DownloadContent>
+            </DownloadView>
+          </DownloadSection>
+        </Container>
       </StyledPage>
     </>
   );
@@ -189,8 +191,26 @@ const devices = {
 };
 const StyledPage = styled.div``;
 
-const AboutContainer = styled.div`
-  background-color: #00296b;
+const Container = styled.div`
+  background-color: ${(props) => {
+    if (props.about) {
+      return `
+        #00296b;
+        color: #fff;
+    `;
+    } else if (props.noBg) {
+      return `
+        background: #fff;
+        color: #202020;
+    `;
+    } else if (props.values) {
+      return `
+        #f8fafc;
+        color: #202020;
+    `;
+    }
+  }};
+
   display: flex;
   justify-content: center;
 `;

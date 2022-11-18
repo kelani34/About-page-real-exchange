@@ -445,8 +445,6 @@ const TeamSection = styled.div`
   }
 `;
 
-const TeamContent = styled.div``;
-
 const TeamMembers = styled.div`
   display: flex;
   flex-wrap: wrap;

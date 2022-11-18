@@ -5,7 +5,7 @@ const TeamMember = (props) => {
   return (
     <>
       <StyledTeam>
-        <img src={props.image} />
+        <img src={props.image} alt=""/>
         <h2>{props.name}</h2>
         <span>{props.designation}</span>
       </StyledTeam>

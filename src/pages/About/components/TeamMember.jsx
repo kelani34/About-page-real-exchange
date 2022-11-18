@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import teamMember from "../assets/person1.png";
 const TeamMember = (props) => {
   return (
     <>
       <StyledTeam>
-        <img src={props.image} alt=""/>
+        <img src={props.image} alt="" />
         <h2>{props.name}</h2>
         <span>{props.designation}</span>
       </StyledTeam>

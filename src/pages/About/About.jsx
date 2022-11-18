@@ -261,7 +261,6 @@ const AboutImage = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-family: var(--font-family);
 `;
 const AboutHead = styled.h1`
   margin: 50px 0;
@@ -271,7 +270,7 @@ const AboutHead = styled.h1`
 `;
 const AboutText = styled.p`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 28px;
 
   @media ${devices.laptop} {
@@ -491,7 +490,7 @@ const DownloadContent = styled.div`
   }
 `;
 const DownloadHeader = styled.div`
-  font-weight: 600;
+  font-weight: 500;
   font-size: 22px;
   line-height: 28px;
 `;

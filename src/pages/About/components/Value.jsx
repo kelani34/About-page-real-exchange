@@ -22,6 +22,7 @@ const StyledValue = styled.div`
   align-items: center;
 `;
 const StyledHeading = styled.h2`
+font-family: var(--font-family);
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -29,6 +30,7 @@ const StyledHeading = styled.h2`
 `;
 
 const StyledText = styled.p`
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;

@@ -16,142 +16,133 @@ const About = () => {
   return (
     <>
       <StyledPage>
-        <AboutSection>
-          <AboutContent>
-            <AboutHead>About Us</AboutHead>
-            <AboutText>
-              Bankstreet is a platform that allows User to recieve/veiw instant
-              conversion rates using customized areas real-time charts that fit
-              the Ecomony value and a historical conversion record from one to
-              one year and to enhance the customer experience{" "}
-            </AboutText>
-          </AboutContent>
-          <AboutImage>
-            <Img src={mobileImage} alt="mobileimage" />
-          </AboutImage>
-        </AboutSection>
+        <AboutContainer>
+          <AboutSection>
+            <AboutContent>
+              <AboutHead>About Us</AboutHead>
+              <AboutText>
+                Bankstreet is a platform that allows User to recieve/veiw
+                instant conversion rates using customized areas real-time charts
+                that fit the Ecomony value and a historical conversion record
+                from one to one year and to enhance the customer experience{" "}
+              </AboutText>
+            </AboutContent>
+            <AboutImage>
+              <Img src={mobileImage} alt="mobileimage" />
+            </AboutImage>
+          </AboutSection>
+        </AboutContainer>
 
-        <MissionVisionSection>
-          <MissionSection>
-            <MissionImage src={missionImage} alt="mission" />
-            <MissionContent>
-              <MissionHead>Our Mission</MissionHead>
-              <MissionText>
-                To create a onestop platform that allow user to view their
-                current and standard economic money rate in other currencies
-              </MissionText>
-            </MissionContent>
-          </MissionSection>
-          <MissionSection vision>
-            <MissionImage vision src={visionImage} alt="mission" />
-            <MissionContent>
-              <MissionHead>Our Vision</MissionHead>
-              <MissionText>
-                To prepare the users mindset for any expenditure in any country
-                of thier chioce
-              </MissionText>
-            </MissionContent>
-          </MissionSection>
-        </MissionVisionSection>
-
-        <ValueSection>
-          <StyledContent>
-            <StyledHead>Our Values</StyledHead>
-            <StyledText>
-              Offering a unique experience and providing an accurate of any
-              country exchange rate of your choice
-            </StyledText>
-          </StyledContent>
-          <ValuesList>
-            <Value
-              icon={<EntrepreneurshipIcon />}
-              text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-              heading="Entrepreneurship"
-            />
-            <Value
-              icon={<EntrepreneurshipIcon />}
-              text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-              heading="Entrepreneurship"
-            />
-            <Value
-              icon={<EntrepreneurshipIcon />}
-              text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-              heading="Entrepreneurship"
-            />
-            <Value
-              icon={<EntrepreneurshipIcon />}
-              text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-              heading="Entrepreneurship"
-            />
-          </ValuesList>
-        </ValueSection>
-
-        <TeamSection>
-          <StyledContent>
-            <StyledHead>Meet the Brilliant Team</StyledHead>
-            <StyledText>
-              Meet our team of digital warriors ready to harness the force for
-              good
-            </StyledText>
-          </StyledContent>
-          <TeamMembers>
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-            <TeamMember
-              image={teamate1}
-              name="Person Name"
-              designation="designation"
-            />
-          </TeamMembers>
-        </TeamSection>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <MissionVisionSection>
+            <MissionSection>
+              <MissionImage src={missionImage} alt="mission" />
+              <MissionContent>
+                <MissionHead>Our Mission</MissionHead>
+                <MissionText>
+                  To create a onestop platform that allow user to view their
+                  current and standard economic money rate in other currencies
+                </MissionText>
+              </MissionContent>
+            </MissionSection>
+            <MissionSection vision>
+              <MissionImage vision src={visionImage} alt="mission" />
+              <MissionContent>
+                <MissionHead>Our Vision</MissionHead>
+                <MissionText>
+                  To prepare the users mindset for any expenditure in any
+                  country of thier chioce
+                </MissionText>
+              </MissionContent>
+            </MissionSection>
+          </MissionVisionSection>
+        </div>
+        <ValuesContainer>
+          <ValueSection>
+            <StyledContent>
+              <StyledHead>Our Values</StyledHead>
+              <StyledText>
+                Offering a unique experience and providing an accurate of any
+                country exchange rate of your choice
+              </StyledText>
+            </StyledContent>
+            <ValuesList>
+              <Value
+                icon={<EntrepreneurshipIcon />}
+                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
+                heading="Entrepreneurship"
+              />
+              <Value
+                icon={<EntrepreneurshipIcon />}
+                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
+                heading="Entrepreneurship"
+              />
+              <Value
+                icon={<EntrepreneurshipIcon />}
+                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
+                heading="Entrepreneurship"
+              />
+              <Value
+                icon={<EntrepreneurshipIcon />}
+                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
+                heading="Entrepreneurship"
+              />
+            </ValuesList>
+          </ValueSection>
+        </ValuesContainer>
+        <TeamContainer>
+          <TeamSection>
+            <StyledContent>
+              <StyledHead>Meet the Brilliant Team</StyledHead>
+              <StyledText>
+                Meet our team of digital warriors ready to harness the force for
+                good
+              </StyledText>
+            </StyledContent>
+            <TeamMembers>
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+              <TeamMember
+                image={teamate1}
+                name="Person Name"
+                designation="designation"
+              />
+            </TeamMembers>
+          </TeamSection>
+        </TeamContainer>
 
         <DownloadSection>
           <MImg src={mobileImage} />
@@ -198,12 +189,17 @@ const devices = {
 };
 const StyledPage = styled.div``;
 
-const AboutSection = styled.div`
+const AboutContainer = styled.div`
   background-color: #00296b;
+  display: flex;
+  justify-content: center;
+`;
+const AboutSection = styled.div`
+  /* background-color: #00296b; */
   display: flex;
   color: #fff;
   padding: 4rem 177px;
-
+  width: 1600px;
   @media ${devices.laptop} {
     flex-direction: row;
     padding: 42px 65px;
@@ -295,9 +291,10 @@ const MissionVisionSection = styled.div`
   color: #202020;
   font-family: var(--font-family);
   padding: 100px 177px;
+  width: 1600px;
   @media ${devices.laptop} {
     flex-direction: column;
-    padding: 42px 224px;
+    padding: 42px 24px;
     align-items: center;
   }
   @media ${devices.tablet} {
@@ -355,13 +352,19 @@ const MissionText = styled.p`
   line-height: 28px;
 `;
 
-const ValueSection = styled.div`
+const ValuesContainer = styled.div`
   background-color: #f8fafc;
+  display: flex;
+  justify-content: center;
+`;
+
+const ValueSection = styled.div`
   display: flex;
   flex-direction: column;
   color: #202020;
   font-family: var(--font-family);
   padding: 100px 177px;
+  width: 1660px;
 
   @media ${devices.laptopS} {
     flex-direction: column;
@@ -410,14 +413,19 @@ const ValuesList = styled.div`
   }
 `;
 
-const TeamSection = styled.div`
+const TeamContainer = styled.div`
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+`;
+
+const TeamSection = styled.div`
   display: flex;
   flex-direction: column;
   color: #202020;
   font-family: var(--font-family);
   padding: 100px 177px;
-
+  width: 1600px;
   @media ${devices.laptop} {
     flex-direction: column;
     padding: 42px 224px;

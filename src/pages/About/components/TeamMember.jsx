@@ -6,7 +6,7 @@ const TeamMember = (props) => {
       <StyledTeam>
         <img src={props.image} alt="" />
         <h2>{props.name}</h2>
-        <span>{props.designation}</span>
+        <span style={{ color: "#64748B" }}>{props.designation}</span>
       </StyledTeam>
     </>
   );

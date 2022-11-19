@@ -6,13 +6,66 @@ import visionImage from "./assets/vision-image.png";
 import Value from "./components/Value";
 import {
   AppstoreIcon,
+  CommunityIcon,
+  DiversityIcon,
   EntrepreneurshipIcon,
   GoogleplayIcon,
+  InnovationIcon,
 } from "./assets/icons/icons";
 import TeamMember from "./components/TeamMember";
 import teamate1 from "./assets/person1.png";
+import teamate2 from "./assets/person2.png";
+import teamate3 from "./assets/person3.png";
+import teamate4 from "./assets/person4.png";
+import teamate5 from "./assets/person5.png";
+import teamate6 from "./assets/person6.png";
+import teamate7 from "./assets/person7.png";
+import teamate8 from "./assets/person8.png";
 import scan from "./assets/scan-image.png";
 const About = () => {
+  const teamMember = [
+    {
+      name: "Person name",
+      image: teamate1,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate2,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate3,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate4,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate5,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate6,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate7,
+      designation: "designation",
+    },
+    {
+      name: "Person name",
+      image: teamate8,
+      designation: "designation",
+    },
+  ];
+
   return (
     <>
       <StyledPage>
@@ -74,19 +127,19 @@ const About = () => {
                 heading="Entrepreneurship"
               />
               <Value
-                icon={<EntrepreneurshipIcon />}
-                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-                heading="Entrepreneurship"
+                icon={<DiversityIcon />}
+                text="At StreetRate we embrace our interdependence as humans, our rich cultures, and places we come from."
+                heading="Diversity"
               />
               <Value
-                icon={<EntrepreneurshipIcon />}
-                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-                heading="Entrepreneurship"
+                icon={<InnovationIcon />}
+                text="We partner people with technology to create an impact-first work environment."
+                heading="Innovation"
               />
               <Value
-                icon={<EntrepreneurshipIcon />}
-                text="Ability to identify problems, and collaboratively solve them to create opportunities for everyone."
-                heading="Entrepreneurship"
+                icon={<CommunityIcon />}
+                text="Our approach is simple. Great people and a vibrant community, make a good company."
+                heading="Community"
               />
             </ValuesList>
           </ValueSection>
@@ -101,46 +154,15 @@ const About = () => {
               </StyledText>
             </StyledContent>
             <TeamMembers>
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
-              <TeamMember
-                image={teamate1}
-                name="Person Name"
-                designation="designation"
-              />
+              {teamMember.map((member) => {
+                return (
+                  <TeamMember
+                    image={member.image}
+                    name={member.name}
+                    designation={member.designation}
+                  />
+                );
+              })}
             </TeamMembers>
           </TeamSection>
         </Container>
@@ -177,10 +199,10 @@ const About = () => {
 export default About;
 
 const sizes = {
-  mobile: "490px",
-  tablet: "650px",
+  mobile: "480px",
+  tablet: "768px",
   laptopS: "1024px",
-  laptop: "1184px",
+  laptop: "1200px",
 };
 
 const devices = {
@@ -288,19 +310,26 @@ const AboutText = styled.p`
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
+  max-width: 600px;
 
   @media ${devices.laptop} {
     font-size: 16px;
+  }
+  @media ${devices.tablet} {
+    padding: 0 60px;
+  }
+  @media ${devices.mobile} {
+    padding: 0;
   }
 `;
 
 const Img = styled.img`
   width: 422px;
   @media ${devices.tablet} {
-    width: 105px;
+    width: 300px;
   }
   @media ${devices.mobile} {
-    width: 95px;
+    width: 224px;
   }
 `;
 
@@ -372,12 +401,6 @@ const MissionText = styled.p`
   line-height: 28px;
 `;
 
-const ValuesContainer = styled.div`
-  background-color: #f8fafc;
-  display: flex;
-  justify-content: center;
-`;
-
 const ValueSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -433,12 +456,6 @@ const ValuesList = styled.div`
   }
 `;
 
-const TeamContainer = styled.div`
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-`;
-
 const TeamSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -460,7 +477,7 @@ const TeamSection = styled.div`
   }
   @media ${devices.tablet} {
     flex-direction: column;
-    padding: 42px 44px;
+    padding: 42px 94px;
     align-items: center;
     width: auto;
   }
@@ -488,15 +505,14 @@ const DownloadSection = styled.div`
   /* justify-content: space-between; */
   color: #202020;
   font-family: var(--font-family);
-  padding: 100px 177px;
 
   @media ${devices.laptop} {
     flex-direction: column;
-    padding: 42px 224px;
+    padding: 42px 24px;
     align-items: center;
     /* width: 730px; */
   }
-  @media ${devices.tablet} {
+  @media ${devices.laptopS} {
     flex-direction: column;
     padding: 42px 44px;
     align-items: center;
@@ -509,7 +525,7 @@ const DownloadSection = styled.div`
 `;
 const DownloadView = styled.div``;
 const DownloadContent = styled.div`
-  margin: 0 158px;
+  margin: 0 0 0 158px;
   @media ${devices.laptop} {
     margin: 0;
   }
